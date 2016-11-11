@@ -1,0 +1,84 @@
+props
+- 컴포넌트 내부의 Immutuable data
+
+class Codelab extends React.Component{
+	render(){
+		return(
+			<div>
+        <h1>Hello! {this.props.name}</h1>
+        <h2>{this.props.children}</h2>
+      </div>
+		);
+	}
+}
+
+class App extends React.Component{
+	render(){
+		return(
+			<Codelab name="world">Today</Codelab>
+		);
+	}
+}
+
+ReactDOM.render(<App/>, document.getElementById("root"));
+
+
+//2
+class Codelab extends React.Component{
+	render(){
+		return(
+			<div>
+        <h1>Hello! {this.props.name}</h1>
+        <h2>{this.props.children}</h2>
+      </div>
+		);
+	}
+}
+
+class App extends React.Component{
+	render(){
+		return(
+			<Codelab name={this.props.name}>Today</Codelab>
+		);
+	}
+}
+
+ReactDOM.render(<App name="test"></App>, document.getElementById("root"));
+
+
+기본값 설정
+Component.defaultProps = {...}
+
+class App extends React.Component{
+	reder(){
+		return(
+			<div>{this.props.value}</div>
+		);
+	}
+}
+
+App.defaultProps = {
+	value:0
+}
+
+Type 검증
+Component.proptpes = {...}
+
+
+class App extends React.Component{
+	reder(){
+		return(
+			<div>
+				{this.props.value}
+				{this.props.secondValue}
+				{this.props.thirdValue}
+			</div>
+		);
+	}
+}
+
+App.proptypes = {
+	vale:React.PropTypes.string,
+	secondValue:React.PropTypes.number,
+	thirdValue:React.PropTypes.any.isRequired
+}
