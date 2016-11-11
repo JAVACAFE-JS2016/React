@@ -23,7 +23,7 @@
         - React.Component 클래스를 상속한 자바스크립트 컴포넌트
         ~~~
           class StoryBox extends React.Component{
-            render(){ //모든 컴포넌트는 rener() 필요
+            render(){ //모든 컴포넌트는 render() 필요
               return(
                 <div>Story box</div>
               )
