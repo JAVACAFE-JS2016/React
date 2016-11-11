@@ -94,7 +94,11 @@
     - something.js -> React 라이브러리와 사용자 컴포넌트가 로드됨
     - ReactDom 이 컴포넌트로 랜더링됨
     - Virtual DOM 이 실제 DOM으로 바뀜
-
+    
+# react test site
+https://codepen.io/pen/
+- 여기에서 Babel 설정(ES6 이전 문법으로 전환)
+- Quick-add에서 React(컴포넌트 담당), React DOM(DOM 랜더링) 선택
 
 # 리액트 요약
   - React was built to solve one problem:building large applications with data that changes over time
